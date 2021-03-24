@@ -4,6 +4,10 @@
         <meta charset= "utf-8">
         <meta name="viewpart" content="width=device-width, initial-scale=1">
         <title>Angelino Home</title>
+
+        <!-- Link per far funzionare il css di darkly -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.6.0/dist/darkly/bootstrap.css" integrity="sha256-sI9r5OJ+Pe8S/XYC/eO2EUp8TJRGG1TMDaPkJPlyFNo=" crossorigin="anonymous">
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
         <style>
             html, body { margin: 0; padding: 0; background-color: "red"}
@@ -11,13 +15,81 @@
         </style>
 </head>
 <Body>
+    <!-- Contenitore che centra il sito -->
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Account Instagram</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="ROBOT ANGELINO.html">Robot</a>
+                            <a class="dropdown-item" href="Squadra Atalanta.html">Squadra Atalanta</a>
+                            <a class="dropdown-item" href="Clock funzionante Angelino.html">Orologio</a>
+                            <a class="dropdown-item" href="Soft Skill.html">Soft Skill</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
 
 
-<h1> Home File </h1>
-    <p> Link Robot Funzionante: <a href = "ROBOT ANGELINO.html" > file </a> </p>
-      <p> Link Soft Skill: <a href = "Soft Skill.html" > file </a> </p>
-    <p> Link Della Squadra dell'Atalanta: <a href = "Squadra Atalanta.html" > file </a> </p>
-    <p> Link Orologio Funzionante <a href = "Clock funzionante Angelino.html" > file </a> </p>
+    <!-- Script da inserire nelle pagine web per la navbar (o almeno credo perché se non inserisco non funziona la navbar HAHAHAH) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.js" integrity="sha256-U+mDCLgTk8IMb18+fQT+ucvP73uHTPaG2qZU9o7smtE=" crossorigin="anonymous"></script>
+    <script>
+        (function () {
+            'use strict';
+
+            $(window).scroll(function () {
+                var top = $(document).scrollTop();
+                if (top > 50) {
+                    $('#home > .navbar').removeClass('navbar-transparent');
+                } else {
+                    $('#home > .navbar').addClass('navbar-transparent');
+                }
+            })
+
+            $('a[href="#"]').click(function (event) {
+                event.preventDefault();
+            })
+
+            // $('.alert').alert()
+            // $('.carousel').carousel();
+            $('.bs-component [data-toggle="popover"]').popover();
+            $('.bs-component [data-toggle="tooltip"]').tooltip();
+            $('.bs-component [data-toggle="popover"]').popover();
+            // $('.bs-component .modal-dialog').modal();
+
+        })();
+    </script>
 </Body>
 
 </html>
